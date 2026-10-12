@@ -1,25 +1,53 @@
 {
   "expo": {
-    "name": "tvcast",
+    "name": "TV Cast",
     "slug": "tvcast",
     "version": "1.0.0",
+    "newArchEnabled": false,
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.turgaykirkil.tvcast",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "TV Cast, Wi-Fi ağınızdaki Chromecast ve Android TV (Mi Box vb.) alıcılarını keşfetmek ve video aktarımı yapmak için yerel ağ izni gerektirir.",
+        "NSBonjourServices": [
+          "_googlecast._tcp",
+          "_CC1AD845._googlecast._tcp"
+        ],
+        "NSMicrophoneUsageDescription": "Chromecast Yakındaki Cihazlar (Guest Mode) ultrasonik eşleşmesi için isteğe bağlı olarak kullanılır.",
+        "NSBluetoothAlwaysUsageDescription": "Chromecast ve Android TV cihazlarının yakındaki keşfi için Bluetooth izni gereklidir.",
+        "NSBluetoothPeripheralUsageDescription": "Chromecast cihazlarının keşfi için Bluetooth izni gereklidir."
+      }
     },
     "android": {
+      "package": "com.turgaykirkil.tvcast",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0F172A",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "INTERNET",
+        "FOREGROUND_SERVICE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-google-cast",
+        {
+          "receiverAppId": "CC1AD845",
+          "expandedController": true
+        }
+      ],
+      "expo-font"
+    ]
   }
 }
