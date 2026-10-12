@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TV Cast",
-    "slug": "tvcast",
+    "name": "Beamio",
+    "slug": "beamio",
     "version": "1.0.0",
     "newArchEnabled": false,
     "orientation": "portrait",
@@ -11,7 +11,8 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.turgaykirkil.tvcast",
       "infoPlist": {
-        "NSLocalNetworkUsageDescription": "TV Cast, Wi-Fi ağınızdaki Chromecast ve Android TV (Mi Box vb.) alıcılarını keşfetmek ve video aktarımı yapmak için yerel ağ izni gerektirir.",
+        "CFBundleDisplayName": "Beamio",
+        "NSLocalNetworkUsageDescription": "Beamio, Wi-Fi ağınızdaki Chromecast ve Android TV (Mi Box vb.) alıcılarını keşfetmek ve video aktarımı yapmak için yerel ağ izni gerektirir.",
         "NSBonjourServices": [
           "_googlecast._tcp",
           "_CC1AD845._googlecast._tcp"

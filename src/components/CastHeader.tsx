@@ -18,8 +18,8 @@ export const CastHeader: React.FC<Props> = ({ onOpenDeviceModal, discoveredDevic
           <Ionicons name="tv-outline" size={24} color="#38BDF8" />
         </View>
         <View style={styles.titleTextContainer}>
-          <Text style={styles.title}>TV Cast</Text>
-          <Text style={styles.subtitle}>Chromecast & Android TV Aktarıcı</Text>
+          <Text style={styles.title}>Beamio</Text>
+          <Text style={styles.subtitle}>Smart Web & Video Caster</Text>
         </View>
       </View>
 
